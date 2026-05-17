@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: barfly-sparkguide-ai
+    env: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: HOST_PIN
+        value: "2468"

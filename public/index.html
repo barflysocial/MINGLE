@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Barfly Social | SparkGuide AI</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <div class="brand-mark">✦</div>
+      <div>
+        <div class="eyebrow">Barfly Social MVP</div>
+        <h1>SparkGuide AI</h1>
+      </div>
+      <button class="ghost small" id="resetLocalBtn" title="Clears only this device">Reset Device</button>
+    </header>
+
+    <main id="app"></main>
+
+    <footer class="footer">
+      <span>Demo Host PIN: <strong>2468</strong></span>
+      <span>RSVP: <strong>SPARK</strong></span>
+      <span>Check-in: <strong>HOST77</strong></span>
+    </footer>
+  </div>
+
+  <template id="landingTemplate">
+    <section class="hero-card">
+      <div class="hero-copy">
+        <p class="tag">Real conversations. Real chemistry. No endless swiping.</p>
+        <h2>Dating becomes a live social game.</h2>
+        <p>SparkGuide AI interviews players, suggests compatible conversations, gives icebreakers, and unlocks chat only after mutual interest.</p>
+        <div class="button-row">
+          <button class="primary" data-view="player">Join as Player</button>
+          <button class="secondary" data-view="host">Host Dashboard</button>
+        </div>
+      </div>
+      <div class="phone-preview">
+        <div class="phone-notch"></div>
+        <div class="mini-card glow">
+          <div class="mini-title">Tonight’s Mission</div>
+          <p>Find someone who values loyalty, peace, and real communication.</p>
+        </div>
+        <div class="mini-card">
+          <div class="mini-title">SparkGuide says</div>
+          <p>Ask: “What does consistency look like when dating?”</p>
+        </div>
+        <div class="match-pill">Mutual Spark Unlocked</div>
+      </div>
+    </section>
+
+    <section class="grid three">
+      <article class="info-card">
+        <h3>AI Onboarding</h3>
+        <p>Players build a private dating profile through guided questions instead of a boring bio.</p>
+      </article>
+      <article class="info-card">
+        <h3>Live Rounds</h3>
+        <p>Hosts start social missions, prompts, and match rounds during real events.</p>
+      </article>
+      <article class="info-card">
+        <h3>Safe Unlocks</h3>
+        <p>No direct messages unless both people choose spark, maybe, or friend vibe.</p>
+      </article>
+    </section>
+  </template>
+</body>
+<script src="/app.js"></script>
+</html>

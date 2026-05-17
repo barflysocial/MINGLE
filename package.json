@@ -1,0 +1,22 @@
+{
+  "name": "barfly-sparkguide-ai-mvp",
+  "version": "1.0.0",
+  "description": "Barfly Social SparkGuide AI dating chat and live event matching MVP",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "keywords": [
+    "barfly",
+    "dating",
+    "ai-chat",
+    "events",
+    "matchmaking"
+  ],
+  "author": "Barfly Social",
+  "license": "UNLICENSED"
+}
