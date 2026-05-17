@@ -1,0 +1,39 @@
+{
+  "event": {
+    "id": "demo-event",
+    "title": "One Match AI Mingle Night",
+    "venue": "Barfly Social",
+    "rsvpCode": "ONEMATCH",
+    "checkinCode": "HOST77",
+    "status": "open",
+    "roundLabel": "AI Matchmaker Funnel",
+    "createdAt": "2026-05-17T00:00:00.000Z"
+  },
+  "players": [
+    {
+      "id": "player_9a9f326de175",
+      "avatarName": null,
+      "avatarNameAssignedAt": null,
+      "ageConfirmed": true,
+      "termsAccepted": true,
+      "termsAcceptedAt": "2026-05-17T23:14:12.314Z",
+      "rsvpOk": true,
+      "checkedIn": false,
+      "ready": false,
+      "stage": "liveVerify",
+      "liveVerified": false,
+      "liveChallenge": "Blink twice, then smile.",
+      "avatarImage": null,
+      "livePhoto": null,
+      "profile": {},
+      "aiLog": [],
+      "blockedUserIds": [],
+      "createdAt": "2026-05-17T23:14:12.314Z",
+      "updatedAt": "2026-05-17T23:14:12.314Z"
+    }
+  ],
+  "matches": [],
+  "reports": [],
+  "blocks": [],
+  "usedAvatarNames": []
+}
