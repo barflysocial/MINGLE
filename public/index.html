@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>One Match AI</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <main class="container">
+    <div class="brand">
+      <div class="logo"><span>1</span></div>
+      <div>
+        <strong>One Match AI</strong><br />
+        <span class="small">No swiping. No guessing. One strongest match.</span>
+      </div>
+    </div>
+
+    <section class="hero" id="landing">
+      <div class="card">
+        <div class="titleGraphicWrap"><img src="/mingle-title.png" class="titleGraphic" alt="One Match AI Mingle title screen"></div><h1>User Mode</h1>
+        <p class="tagline">One Match AI Mingle is the user-facing experience: live selfie verification, system-assigned avatar name, tap-based questions, one strongest match, First Spark round, mutual chat, and optional mutual real-photo reveal.</p>
+        <div class="row wrap">
+          <span class="pill ok">Live camera only</span>
+          <span class="pill">Cartoon avatar</span>
+          <span class="pill">Real photo hidden first</span>
+          <span class="pill">Mutual photo reveal</span>
+          <span class="pill warn">Anti-copy/paste</span>
+        </div>
+        <div class="hr"></div>
+        <p><strong>Flow:</strong> RSVP → create private avatar name → take a live selfie → get cartoon avatar → receive your assigned name → answer tap-based One Match AI questions → host check-in → receive one strongest match → First Spark Round → mutual chat → optional mutual real-photo reveal.</p>
+        
+      </div>
+
+      <div class="card">
+        <h2>Join Mingle</h2>
+        <form id="joinForm" class="grid">
+          <div>
+            <label for="rsvpCode">RSVP code</label>
+            <input id="rsvpCode" value="ONEMATCH" required />
+          </div>
+          <label class="row" style="margin:0">
+            <input id="ageConfirmed" type="checkbox" style="width:auto" />
+            I confirm I am 18 or older.
+          </label>
+          <button class="hot" type="submit">Enter User Mode</button>
+        </form>
+        <p id="joinMsg" class="small"></p>
+      </div>
+    </section>
+
+    <section id="app" class="grid hide">
+      <div class="card row space wrap">
+        <div>
+          <h2 id="playerTitle">Your One Match AI session</h2>
+          <p id="playerStatus" class="small"></p>
+        </div>
+        <div class="row wrap">
+          <button id="refreshBtn" class="secondary">Refresh</button>
+          <button id="leaveBtn" class="danger">Leave Device Session</button>
+        </div>
+      </div>
+
+      <div class="grid2 topAlign">
+        <div class="card" id="verificationCard">
+          <div class="row space wrap">
+            <h2>Live Verified Cartoon Avatar</h2>
+            <span id="verifyPill" class="pill warn">Required</span>
+          </div>
+          <p class="small">Saved photos are not allowed. Use your live camera, complete the random challenge, then capture your selfie. One Match AI turns it into your public cartoon avatar while keeping your real photo private.</p>
+          <div class="notice">
+            <strong>Live challenge:</strong> <span id="liveChallengeText">Loading…</span>
+          </div>
+          <div class="cameraGrid">
+            <div class="glass">
+              <h3>Live camera</h3>
+              <video id="liveVideo" autoplay playsinline muted class="cameraVideo"></video>
+              <div class="row wrap" style="margin-top:10px">
+                <button id="startCameraBtn" class="secondary">Start Camera</button>
+                <button id="captureBtn" class="hot">Capture Live Selfie</button>
+                <button id="retakeBtn" class="secondary">Retake</button>
+              </div>
+            </div>
+            <div class="glass">
+              <h3>Preview</h3>
+              <div id="capturePreviewWrap" class="previewGrid">
+                <div>
+                  <p class="small">Private live photo</p>
+                  <img id="realPreview" class="previewImage" alt="Real preview" />
+                </div>
+                <div>
+                  <p class="small">Public cartoon avatar</p>
+                  <img id="avatarPreview" class="previewImage" alt="Avatar preview" />
+                </div>
+              </div>
+              <button id="submitVerificationBtn" class="teal" style="margin-top:10px">Use This Avatar</button>
+            </div>
+          </div>
+          <p id="verifyMsg" class="small"></p>
+          <canvas id="realCanvas" class="hide"></canvas>
+          <canvas id="avatarCanvas" class="hide"></canvas>
+        </div>
+
+        <div class="card" id="profileCard">
+          <div class="row space wrap">
+            <h2>Your identity</h2>
+            <span id="profilePill" class="pill"></span>
+          </div>
+          <div class="profileHero">
+            <img id="myAvatarImage" class="avatarLarge" alt="Your avatar" />
+            <div>
+              <h3 id="myAvatarName">Avatar</h3>
+              <p class="small" id="myAvatarMeta"></p>
+              <div class="row wrap" style="margin-top:10px">
+                <span class="pill ok">Cartoon avatar shown first</span>
+                <span class="pill">Real photo hidden</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid2 topAlign">
+        <div class="card" id="aiCard">
+          <div class="row space wrap">
+            <h2>AI Matchmaker Chat</h2>
+            <span id="progressPill" class="pill warn">Starting</span>
+          </div>
+          <div class="notice" id="aiLine">One Match AI is ready. Anti-cheat mode is active: questions are tap-based and copy/paste is blocked inside the app.</div>
+          <div class="hr"></div>
+          <h3 id="questionText"></h3>
+          <p id="questionHelper"></p>
+          <div id="choices" class="choiceGrid"></div>
+          <div id="freeAnswerWrap" class="hide">
+            <label for="freeAnswer">Your answer</label>
+            <textarea id="freeAnswer" placeholder="Write a short answer..."></textarea>
+          </div>
+          <div class="row" style="margin-top:14px">
+            <button id="answerBtn">Save Answer</button>
+          </div>
+        </div>
+
+        <div class="card" id="checkinCard">
+          <h2>Check in</h2>
+          <p>After your live verification and AI profile are complete, enter the host check-in code. This keeps the session tied to real people who are actually at the event.</p>
+          <div class="grid">
+            <input id="checkinCode" placeholder="Host check-in code" value="HOST77" />
+            <button id="checkinBtn" class="teal">Check In</button>
+            <button id="findMatchBtn" class="hot">Find My One Match</button>
+          </div>
+          <p id="checkinMsg" class="small"></p>
+        </div>
+      </div>
+
+      <div class="card hide" id="matchCard">
+        <div class="row space wrap">
+          <div>
+            <h2>Your One Match</h2>
+            <p id="matchIntro" class="tagline"></p>
+          </div>
+          <span id="scorePill" class="pill ok"></span>
+        </div>
+        <div class="matchHero">
+          <img id="matchAvatar" class="avatarLarge" alt="Matched avatar" />
+          <div>
+            <p class="small">Shown first: cartoon avatar only</p>
+            <span class="pill ok">Live verified</span>
+          </div>
+        </div>
+        <div class="grid2">
+          <div class="glass">
+            <h3>Why this match?</h3>
+            <ul id="reasonList"></ul>
+          </div>
+          <div class="glass">
+            <h3>First Spark Round</h3>
+            <p id="sparkPrompt"></p>
+            <div class="row wrap">
+              <button id="startSparkBtn" class="hot">Start 7-Minute First Spark</button>
+              <span id="sparkTimer" class="pill warn">Not started</span>
+            </div>
+          </div>
+        </div>
+        <div class="hr"></div>
+        <div id="ratingBox" class="grid">
+          <h3>Private rating after the conversation</h3>
+          <p class="small">No public rejection. Chat unlocks only after mutual interest.</p>
+          <div class="row wrap">
+            <button class="rateBtn" data-rating="Strong Spark">Strong Spark</button>
+            <button class="rateBtn secondary" data-rating="Interested">Interested</button>
+            <button class="rateBtn secondary" data-rating="Friend Vibe">Friend Vibe</button>
+            <button class="rateBtn danger" data-rating="No Connection">No Connection</button>
+          </div>
+          <p id="ratingMsg" class="small"></p>
+        </div>
+      </div>
+
+      <div class="card hide" id="chatCard">
+        <div class="row space wrap">
+          <div>
+            <h2>Mutual Chat</h2>
+            <p class="small">Unlocked because both people showed interest. Keep it respectful and low-pressure.</p>
+          </div>
+          <button id="datePlanBtn" class="teal">Ask AI for Date Plan</button>
+        </div>
+        <div id="datePlan" class="notice hide"></div>
+        <div class="hr"></div>
+        <div id="chatBox" class="chatBox"></div>
+        <div class="row wrap" style="margin-top:12px">
+          <input id="chatInput" placeholder="Write a respectful message..." />
+          <button id="sendChatBtn">Send</button>
+        </div>
+        <div class="hr"></div>
+        <div class="grid2 topAlign">
+          <div>
+            <h3>Mutual real-photo reveal</h3>
+            <p class="small">Cartoon avatars are shown first. Real live photos reveal only if both people agree.</p>
+            <button id="revealBtn" class="hot">Request Real Photo Reveal</button>
+            <p id="revealMsg" class="small"></p>
+            <div id="revealedWrap" class="revealGrid hide">
+              <div>
+                <p class="small">Your live verified photo</p>
+                <img id="myRevealImg" class="previewImage" alt="Your revealed photo" />
+              </div>
+              <div>
+                <p class="small">Their live verified photo</p>
+                <img id="otherRevealImg" class="previewImage" alt="Their revealed photo" />
+              </div>
+            </div>
+          </div>
+          <div>
+            <h3>Optional contact sharing</h3>
+            <p class="small">Only share contact details if both people agree. In-app only is always allowed.</p>
+            <select id="contactType">
+              <option>In-app only</option>
+              <option>Phone number</option>
+              <option>Instagram</option>
+              <option>Another Barfly event</option>
+            </select>
+            <input id="contactValue" placeholder="Optional detail, only if you choose to share" style="margin-top:8px" />
+            <button id="contactBtn" class="secondary" style="margin-top:8px">Save Contact Preference</button>
+            <p id="contactMsg" class="small"></p>
+            <div class="hr"></div>
+            <h3>Safety</h3>
+            <p class="small">Matching does not mean unlimited access. You can end the connection anytime.</p>
+            <textarea id="reportReason" placeholder="Reason for report or block"></textarea>
+            <button id="reportBtn" class="danger" style="margin-top:8px">Report / Block</button>
+            <p id="reportMsg" class="small"></p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>One Match AI • User Mode</footer>
+  <script src="/app.js"></script>
+</body>
+</html>
