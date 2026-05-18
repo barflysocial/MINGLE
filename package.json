@@ -1,0 +1,26 @@
+{
+  "name": "one-match-ai",
+  "version": "1.8.0",
+  "description": "One Match AI v8 - QR scanner fix with customizable case-insensitive venue tokens.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "keywords": [
+    "dating",
+    "ai",
+    "matchmaking",
+    "barfly",
+    "events"
+  ],
+  "author": "Barfly Social",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "qrcode": "^1.5.4",
+    "jsqr": "^1.4.0"
+  }
+}
