@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>One Match AI Host Demo</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <main class="container demoPage">
+    <div class="brand">
+      <div class="logo"><span>1</span></div>
+      <div><strong>One Match AI Host Demo</strong><br><span class="small">Host dashboard preview</span></div>
+    </div>
+
+    <section class="grid3">
+      <div class="stat"><b>47</b><span>Checked in</span></div>
+      <div class="stat"><b>3</b><span>Venues active</span></div>
+      <div class="stat"><b>18</b><span>Serious relationship</span></div>
+      <div class="stat"><b>16</b><span>Cross-venue open</span></div>
+      <div class="stat"><b>8</b><span>Matches made</span></div>
+      <div class="stat"><b>0</b><span>Safety reports</span></div>
+    </section>
+
+    <section class="card">
+      <h2>Venue Manager</h2>
+      <div class="venueHostCard glass">
+        <h3>Urban Daiquiris Denham Springs</h3>
+        <div class="venueManagerSections">
+          <div class="venueSection">
+            <h4>Venue Info</h4>
+            <div class="grid2 venueEditGrid">
+              <input value="Urban Daiquiris Denham Springs" readonly>
+              <input value="Denham Springs, LA" readonly>
+              <input value="https://example.com/logo.png" readonly>
+            </div>
+            <button class="secondary">Save Venue</button>
+          </div>
+          <div class="venueSection">
+            <h4>Event Info</h4>
+            <div class="grid2 venueEditGrid">
+              <input value="Mingle Night" readonly>
+              <input value="8:00 PM" readonly>
+              <input value="2-for-1 daiquiris until 9 PM" readonly>
+              <input value="50 seat cap" readonly>
+            </div>
+            <button class="secondary">Save Event</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Interest Hot Spots</h2>
+      <div class="grid3">
+        <div class="glass"><h3>Looking For</h3><div class="row space"><span>Serious relationship</span><strong>18</strong></div><div class="row space"><span>Open to dating</span><strong>12</strong></div></div>
+        <div class="glass"><h3>Mingle Options</h3><div class="row space"><span>Same venue</span><strong>21</strong></div><div class="row space"><span>Cross-venue</span><strong>16</strong></div></div>
+        <div class="glass"><h3>Top Values</h3><div class="row space"><span>Honesty</span><strong>24</strong></div><div class="row space"><span>Family</span><strong>17</strong></div></div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Host Controls</h2>
+      <div class="row wrap">
+        <button class="hot">Start One Match Round</button>
+        <button class="secondary">Show Check-In QR</button>
+        <button class="secondary">Open Check-In</button>
+        <button class="danger">Delete Event</button>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

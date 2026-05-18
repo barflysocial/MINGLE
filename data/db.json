@@ -1,0 +1,71 @@
+{
+  "event": {
+    "id": "demo-event",
+    "title": "One Match AI Mingle Night",
+    "venue": "Barfly Social",
+    "rsvpCode": "ONEMATCH",
+    "checkinCode": "HOST77",
+    "status": "open",
+    "roundLabel": "AI Matchmaker Funnel",
+    "createdAt": "2026-05-17T00:00:00.000Z",
+    "roundStartsAt": null,
+    "autoStartEnabled": false,
+    "roundStatus": "waiting_for_host"
+  },
+  "venues": [
+    {
+      "id": "urban-denham",
+      "name": "UD Denham",
+      "address": "100 Test",
+      "city": "Denham Springs",
+      "eventTitle": "Mingle Updated",
+      "eventTime": "Tonight",
+      "logoUrl": "https://example.com/logo.png",
+      "isPaid": false,
+      "paymentLink": "",
+      "drinkSpecials": "$5 margaritas",
+      "seatCap": 35,
+      "status": "open",
+      "token": "VENUE-URBAN-DENHAM-77",
+      "createdAt": "2026-05-17T00:00:00.000Z",
+      "updatedAt": "2026-05-18T14:13:55.010Z"
+    },
+    {
+      "id": "pelican-to-mars",
+      "name": "Pelican to Mars",
+      "address": "Baton Rouge, LA",
+      "city": "Baton Rouge",
+      "eventTitle": "Mingle Night",
+      "eventTime": "Tonight",
+      "logoUrl": "",
+      "isPaid": false,
+      "paymentLink": "",
+      "drinkSpecials": "",
+      "seatCap": 50,
+      "status": "open",
+      "token": "VENUE-PELICAN-MARS-77",
+      "createdAt": "2026-05-17T00:00:00.000Z"
+    },
+    {
+      "id": "topgolf-baton-rouge",
+      "name": "Topgolf Baton Rouge",
+      "address": "Baton Rouge, LA",
+      "city": "Baton Rouge",
+      "eventTitle": "Singles Game Night",
+      "eventTime": "Tonight",
+      "logoUrl": "",
+      "isPaid": false,
+      "paymentLink": "",
+      "drinkSpecials": "",
+      "seatCap": 50,
+      "status": "open",
+      "token": "VENUE-TOPGOLF-BR-77",
+      "createdAt": "2026-05-17T00:00:00.000Z"
+    }
+  ],
+  "players": [],
+  "matches": [],
+  "reports": [],
+  "blocks": [],
+  "usedAvatarNames": []
+}
