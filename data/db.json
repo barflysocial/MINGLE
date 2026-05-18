@@ -1,0 +1,77 @@
+{
+  "event": {
+    "id": "demo-event",
+    "title": "One Match AI Mingle Night",
+    "venue": "Barfly Social",
+    "rsvpCode": "ONEMATCH",
+    "checkinCode": "HOST77",
+    "status": "open",
+    "roundLabel": "AI Matchmaker Funnel",
+    "createdAt": "2026-05-17T00:00:00.000Z",
+    "roundStartsAt": "2026-05-18T02:34:46.728Z",
+    "autoStartEnabled": true,
+    "roundStatus": "scheduled"
+  },
+  "venues": [
+    {
+      "id": "urban-denham",
+      "name": "Urban Daiquiris Denham Springs",
+      "address": "Denham Springs, LA",
+      "city": "Denham Springs",
+      "eventTitle": "Mingle Night",
+      "eventTime": "Tonight",
+      "status": "open",
+      "token": "VENUE-URBAN-DENHAM-77",
+      "createdAt": "2026-05-17T00:00:00.000Z"
+    },
+    {
+      "id": "pelican-to-mars",
+      "name": "Pelican to Mars",
+      "address": "Baton Rouge, LA",
+      "city": "Baton Rouge",
+      "eventTitle": "Mingle Night",
+      "eventTime": "Tonight",
+      "status": "open",
+      "token": "VENUE-PELICAN-MARS-77",
+      "createdAt": "2026-05-17T00:00:00.000Z"
+    },
+    {
+      "id": "topgolf-baton-rouge",
+      "name": "Topgolf Baton Rouge",
+      "address": "Baton Rouge, LA",
+      "city": "Baton Rouge",
+      "eventTitle": "Singles Game Night",
+      "eventTime": "Tonight",
+      "status": "open",
+      "token": "VENUE-TOPGOLF-BR-77",
+      "createdAt": "2026-05-17T00:00:00.000Z"
+    }
+  ],
+  "players": [
+    {
+      "id": "player_cde534ca42d3",
+      "avatarName": null,
+      "avatarNameAssignedAt": null,
+      "ageConfirmed": true,
+      "termsAccepted": true,
+      "termsAcceptedAt": "2026-05-18T02:24:46.729Z",
+      "rsvpOk": true,
+      "checkedIn": false,
+      "ready": false,
+      "stage": "liveVerify",
+      "liveVerified": false,
+      "liveChallenge": "Blink twice, then smile.",
+      "avatarImage": null,
+      "livePhoto": null,
+      "profile": {},
+      "aiLog": [],
+      "blockedUserIds": [],
+      "createdAt": "2026-05-18T02:24:46.729Z",
+      "updatedAt": "2026-05-18T02:24:46.729Z"
+    }
+  ],
+  "matches": [],
+  "reports": [],
+  "blocks": [],
+  "usedAvatarNames": []
+}
